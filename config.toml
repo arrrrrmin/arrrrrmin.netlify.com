@@ -1,3 +1,36 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseURL = "https://arrrrrmin.netlify.com/"
+languageCode = "en-US"
+title = "armin - müller-von fischer"
+# Enable comments by entering your Disqus shortname
+disqusShortname = ""
+# Enable Google Analytics by entering your tracking code
+googleAnalytics = ""
+theme = "hugo-sustain"
+
+[permalinks]
+  post = "/:year/:month/:day/:slug"
+
+[params]
+  avatar = "profile.jpg"
+  author = "armin - müller-von fischer"
+  description = "Hi, I'm Armin - freelancing data scientist. DeepLearning & ML"
+
+  # Custom assets can be linked with their paths relative to static/
+  custom_css = ["css/custom.css"]
+  custom_js  = []
+
+[params.social]
+  Github        = "arrrrrmin"
+  Email         = "arrrrrmin@gmail.com"
+  Twitter       = "arrrrrmin"
+  LinkedIn      = "arrrrrmin"
+  # Stackoverflow = "username"
+  # Medium        = "username"
+  # Telegram      = "username"
+
+## Main Menu
+[[menu.main]]
+  name = "projects"
+  identifier = "projects"
+  weight = 200
+  url = "/projects/"
