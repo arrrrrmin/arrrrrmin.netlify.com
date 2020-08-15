@@ -4,7 +4,7 @@ title = "armin - müller-von fischer"
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
-googleAnalytics = ""
+googleAnalytics = "UA-175511625-1"
 theme = "hugo-sustain"
 
 [permalinks]
