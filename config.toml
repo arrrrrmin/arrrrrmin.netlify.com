@@ -1,36 +1,47 @@
-baseURL = "https://arrrrrmin.netlify.com/"
-languageCode = "en-US"
-title = "armin - müller-von fischer"
-# Enable comments by entering your Disqus shortname
-disqusShortname = ""
-# Enable Google Analytics by entering your tracking code
-googleAnalytics = ""
-theme = "hugo-sustain"
+baseURL = "http://arrrrrmin.netlify.app/"
+languageCode = "en-us"
+title = "Hi. I'm Armin :)"
+theme = "hugo-papermod"
 
-[permalinks]
-  post = "/:year/:month/:day/:slug"
+name = "Hi. I'm Armin :)"
+license = "MIT"
+description = "This is my minimalistic freelancer blog-like portfolio"
+homepage = "https://github.com/arrrrrmin"
+tags = [""]
+min_version = "0.74.0"
 
-[params]
-  avatar = "profile.jpg"
-  author = "armin - müller-von fischer"
-  description = "Hi, I'm Armin - freelancing data scientist. DeepLearning & ML"
+[author]
+  name = "arrrrrmin"
+  homepage = "https://github.com/arrrrrmin"
 
-  # Custom assets can be linked with their paths relative to static/
-  custom_css = ["css/custom.css"]
-  custom_js  = []
 
-[params.social]
-  Github        = "arrrrrmin"
-  Email         = "arrrrrmin@gmail.com"
-  Twitter       = "arrrrrmin"
-  LinkedIn      = "armin-müller-von-fischer-7581a8165"
-  # Stackoverflow = "username"
-  # Medium        = "username"
-  # Telegram      = "username"
+[[params.social]]
+name = "Github"
+icon = "github"
+url = "https://github.com/arrrrrmin"
 
-## Main Menu
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+url = "https://twitter.com/arrrrrmin/"
+
 [[menu.main]]
-  name = "projects"
-  identifier = "projects"
-  weight = 200
-  url = "/projects/"
+name = "Intro"
+url = "/posts/intro"
+weight = 1
+
+[[menu.main]]
+name = "Skills"
+url = "/posts/skills"
+weight = 1
+
+[[menu.main]]
+name = "Projects"
+url = "/posts/projects"
+weight = 1
+
+[[menu.main]]
+name = "Work_Experience"
+url = "/posts/work_experience"
+weight = 1
+
