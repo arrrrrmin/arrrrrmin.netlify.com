@@ -22,10 +22,10 @@ params:
     description: "freelancer portfolio"
     author: "arrrrrmin"
 
-    images: ""
+    images: "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4"
 
     ShowReadingTime: true
-    ShowShareButtons: true
+    ShowShareButtons: false
     comments: false
     defaultTheme: auto
     disableThemeToggle: false
@@ -40,7 +40,7 @@ params:
 
     label:
         text: "Home"
-        icon: /apple-touch-icon.png
+        icon: "" #"/apple-touch-icon.png"
         iconHeight: 35
 
     # profile-mode
@@ -57,7 +57,7 @@ params:
 
     # home-info mode
     homeInfoParams:
-        Title: "Hi there \U0001F44B"
+        Title: "Hi there \U0001F44B i'm armin"
         Content: "Welcome to my portfolio"
 
     socialIcons:
