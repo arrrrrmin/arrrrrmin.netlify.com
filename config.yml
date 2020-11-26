@@ -1,0 +1,71 @@
+theme: "hugo-PaperMod"
+
+baseURL: "https://arrrrrmin.netlify.app"
+title: "hi i'm armin"
+paginate: 5
+theme: hugo-PaperMod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+googleAnalytics: ""
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+params:
+    env: production # to enable google analytics, opengraph, twitter-cards and schema.
+    title: "hi i'm armin"
+    description: "freelancer portfolio"
+    author: "arrrrrmin"
+
+    images: ""
+
+    ShowReadingTime: true
+    ShowShareButtons: true
+    comments: false
+    defaultTheme: auto
+    disableThemeToggle: false
+    disableSpecial1stPost: false
+
+    assets:
+        favicon: ""
+        favicon16x16: ""
+        favicon32x32: ""
+        apple_touch_icon: ""
+        safari_pinned_tab: ""
+
+    label:
+        text: "Home"
+        icon: /apple-touch-icon.png
+        iconHeight: 35
+
+    # profile-mode
+    profileMode:
+        enabled: false # needs to be explicitly set
+        title: ExampleSite
+        # imageUrl: '<img location>'
+        # imageTitle: my image
+        buttons:
+            - name: Posts
+              url: posts
+            - name: Tags
+              url: tags
+
+    # home-info mode
+    homeInfoParams:
+        Title: "Hi there \U0001F44B"
+        Content: "Welcome to my portfolio"
+
+    socialIcons:
+        - name: twitter
+          url: "https://twitter.com/arrrrrmin"
+        - name: github
+          url: "https://github.com/arrrrrmin"
+
+    analytics:
+        google:
+            SiteVerificationTag: ""
