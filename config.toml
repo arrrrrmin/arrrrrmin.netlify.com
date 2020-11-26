@@ -1,7 +1,7 @@
 baseURL = "http://arrrrrmin.netlify.app/"
 languageCode = "en-us"
 title = "Hi. I'm Armin :)"
-theme = "hugo-PaperMod"
+theme = "hugo-papermod"
 description = "This is my minimalistic freelancer blog-like portfolio"
 min_version = "0.74.3"
 
