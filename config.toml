@@ -1,9 +1,65 @@
-baseURL = "http://arrrrrmin.netlify.app/"
-languageCode = "en-us"
-title = "Hi. I'm Armin :)"
-theme = "hugo-papermod"
-description = "This is my minimalistic freelancer blog-like portfolio"
-min_version = "0.74.3"
+baseURL: "https://examplesite.com"
+title: Hi there I'm Armin
+paginate: 5
+theme: hugo-papermod
+
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+
+minify:
+    disableXML: true
+    minifyOutput: true
+
+params:
+    env: production
+    title: Hi there I'm Armin
+    description: "A simple and minimalistic portfolio page "
+    author: arrrrrmin
+
+    images: "<link or path of image for opengraph, twitter-cards>"
+
+    ShowReadingTime: true
+    ShowShareButtons: true
+    comments: false
+    defaultTheme: auto
+    disableThemeToggle: false
+    disableSpecial1stPost: false
+
+    assets:
+        favicon: "<link / abs url>"
+        favicon16x16: "<link / abs url>"
+        favicon32x32: "<link / abs url>"
+        apple_touch_icon: "<link / abs url>"
+        safari_pinned_tab: "<link / abs url>"
+
+    label:
+        text: "Home"
+        icon: /apple-touch-icon.png
+        iconHeight: 35
+
+    # profile-mode
+    profileMode:
+        enabled: false # needs to be explicitly set
+
+
+    # home-info mode
+    homeInfoParams:
+        Title: "Hi there \U0001F44B"
+        Content: Welcome to my portfolio
+
+    socialIcons:
+        - name: twitter
+          url: "https://twitter.com/"
+        - name: stackoverflow
+          url: "https://stackoverflow.com"
+        - name: github
+          url: "https://github.com/"
+
+    analytics:
+        google:
+            SiteVerificationTag: ""
 
 [author]
   name = "arrrrrmin"
