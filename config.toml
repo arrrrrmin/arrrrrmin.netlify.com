@@ -2,17 +2,12 @@ baseURL = "http://arrrrrmin.netlify.app/"
 languageCode = "en-us"
 title = "Hi. I'm Armin :)"
 theme = "hugo-PaperMod"
-
-name = "Hi. I'm Armin :)"
-license = "MIT"
 description = "This is my minimalistic freelancer blog-like portfolio"
-tags = [""]
-min_version = "0.74.0"
+min_version = "0.74.3"
 
 [author]
   name = "arrrrrmin"
   homepage = "https://github.com/arrrrrmin"
-
 
 [[params.social]]
 name = "Github"
