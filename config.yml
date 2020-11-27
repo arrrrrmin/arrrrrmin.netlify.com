@@ -32,39 +32,48 @@ params:
     disableSpecial1stPost: false
 
     assets:
-        favicon: ""
-        favicon16x16: ""
-        favicon32x32: ""
-        apple_touch_icon: ""
-        safari_pinned_tab: ""
+        favicon: "/favicon.ico"
+        favicon16x16: "/favicon16x16.png"
+        favicon32x32: "/favicon32x32.png"
+        apple_touch_icon: "/apple_touch_icon.png"
+        safari_pinned_tab: "/apple_touch_icon.png"
 
     label:
         text: "Home"
-        icon: "" #"/apple-touch-icon.png"
+        icon: "" # "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4" "/apple-touch-icon.png"
         iconHeight: 35
 
     # profile-mode
     profileMode:
-        enabled: false # needs to be explicitly set
-        title: ExampleSite
-        # imageUrl: '<img location>'
-        # imageTitle: my image
+        enabled: false
+        title: "<Title>" # optional default will be site title
+        imageUrl: "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4" # optional
+        imageTitle: "<title of image as alt>" # optional
+        imageWidth: 120 # custom size
+        imageHeight: 120 # custom size
         buttons:
-            - name: Posts
-              url: posts
-            - name: Tags
-              url: tags
+            - name: Archive
+              url: "/archive"
+            - name: Github
+              url: "https://github.com/"
+        socialIcons: # optional
+            - name: "Twitter"
+              url: "https://twitter.com/arrrrrmin"
+            - name: "Linkedin"
+              url: "https://www.linkedin.com/in/armin-müller-von-fischer-7581a8165/"
 
     # home-info mode
     homeInfoParams:
-        Title: "Hi there \U0001F44B i'm armin"
-        Content: "Welcome to my portfolio"
+        Title: "Hi there \U0001F44B "
+        Content: "I'm armin, a freelancing data scientist and this is my portfolio"
 
     socialIcons:
         - name: twitter
           url: "https://twitter.com/arrrrrmin"
         - name: github
           url: "https://github.com/arrrrrmin"
+        - name: linkedin
+          url: "https://www.linkedin.com/in/armin-müller-von-fischer-7581a8165/"
 
     analytics:
         google:
