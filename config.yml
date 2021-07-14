@@ -1,8 +1,6 @@
-theme: "hugo-PaperMod"
-
 baseURL: "https://arrrrrmin.netlify.app"
 title: "hi i'm armin"
-paginate: 5
+paginate: 10
 theme: hugo-PaperMod
 
 enableRobotsTXT: true
@@ -18,8 +16,8 @@ minify:
 
 params:
     env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    title: "hi i'm armin"
-    description: "freelancer portfolio"
+    title: "freelancer portfolio"
+    description: "I'm armin. Welcome to my freelancer portfolio."
     author: "arrrrrmin"
 
     images: "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4"
@@ -40,8 +38,8 @@ params:
 
     label:
         text: "Home"
-        icon: "/apple-touch-icon.png" # "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4" "/apple-touch-icon.png"
-        iconHeight: 35
+        icon: "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4" # "/apple-touch-icon.png"
+        iconHeight: 60
 
     # profile-mode
     profileMode:
@@ -65,7 +63,7 @@ params:
     # home-info mode
     homeInfoParams:
         Title: "Hi there \U0001F44B "
-        Content: "I'm armin, a freelancing data scientist and this is my portfolio"
+        Content: "I'm armin, a freelancing data scientist this is my portfolio"
 
     socialIcons:
         - name: twitter

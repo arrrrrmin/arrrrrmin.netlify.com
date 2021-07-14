@@ -1,11 +1,11 @@
 --- 
 title: Work Experience 
-date: 2020-11-26 15:47:22.214030
+date: 2021-07-14 12:22.214030
 draft: false
 ---
 
 
-* **DataScientist**
+* **Data Scientist**
 * **ML Solution Engineer**
 * **Natural Language Processing NLP**
 * **MLOps** / **ML Engineer**
