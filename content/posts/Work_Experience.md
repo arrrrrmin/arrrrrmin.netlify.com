@@ -8,13 +8,9 @@ draft: false
 * **DataScientist**
 * **ML Solution Engineer**
 * **Natural Language Processing NLP**
-* **Customer Prediction**
-* **Customer Analytics**
+* **MLOps** / **ML Engineer**
 * **StartUp Co-Founder**
 * Also I'm providing data and knowledge visualizations to show correlations between data and ML results
 * Architectures and workflows for **Neural Network**
-* Densely connected **NN** for regression or classification
-* **LSTM**s time scale sensitive predictions
-* I consider myself as somewhere inbetween **consulting** and **coding**
-
-
+* **BERT**- **ALBERT**- **SBERT**- **DistilBERT**-Transformers in Pretraining and Finetuning stages
+* I consider myself a **coding consultant**
