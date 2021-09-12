@@ -62,11 +62,6 @@ params:
       URL: "https://github.com/arrrrrmin/arrrrrmin.netlify.com/blob/main/content/"
       Text: "Suggest Changes" # edit text
       appendFilePath: true # to append file path to Edit link
-    outputs:
-      home:
-        - HTML
-        - RSS
-        - JSON # is necessary
     # fuseOpts:
     #   isCaseSensitive: false
     #   shouldSort: true
