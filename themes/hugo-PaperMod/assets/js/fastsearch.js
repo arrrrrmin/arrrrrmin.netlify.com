@@ -1,4 +1,4 @@
-import * as params from '@params';
+// import * as params from '@params';
 
 var fuse; // holds our search engine
 var resList = document.getElementById('searchResults');
