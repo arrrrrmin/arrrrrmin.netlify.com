@@ -5,9 +5,7 @@ draft: false
 summary: "An isolated example to show github authorization-code oauth flow in fastapi for web application flow + simple HttpBearer route dependency. This example can be used for all providers of code-based oauth authorization patterns."
 ---
 
-# fastapi-github-oauth
-An isolated example to show github authorization-code oauth flow in fastapi for 
-**web application flow** + **simple HttpBearer route dependency**. 
+An isolated example to show github authorization-code oauth flow in fastapi for **web application flow** + **simple HttpBearer route dependency**. This example can be used for all providers of code-based oauth authorization patterns.
 
 ## general information
 * [building-oauth-apps](https://docs.github.com/en/developers/apps/building-oauth-apps)
@@ -31,11 +29,11 @@ An isolated example to show github authorization-code oauth flow in fastapi for
 ## web application flow
 > The device flow isn't covered here at all. This example shows a simple web application flow using fastapis onboard utilities.
 
-1. Request user permissions for provided scopes (`/auth/request`)
+* Request user permissions for provided scopes (`/auth/request`)
   * Let your user authenticate the github oauth app permission request
   * Github will forward to your `CALLBACK_URL` (`/auth/login`)
-2. Recieve code from github and use it to provide the satisfied `acces_token` (`/auth/login`)
-3. Use the recieved `acces_token` from step 2 to verify it using the Github API 
+* Recieve code from github and use it to provide the satisfied `acces_token` (`/auth/login`)
+* Use the recieved `acces_token` from step 2 to verify it using the Github API 
   * Output look like: `{"Id":<UserId>,"Login":"<GithubLogin>","Token":"<UserToken>","Message":"Happy hacking :D"}`
 
 ````Python
@@ -66,6 +64,41 @@ async def secure_route(user: helpers.AuthorizedResponse = Depends(auth.authorize
         "You": user,
         "Message": "Nice, your authorized 🎉"
     }
+````
+
+The route parameter `user` is proivded by `Depends(auth.authorized_user)` and has to pass `helpers.AuthorizedResponse`s pydantic validation. So in this single line wraps a lot of handy functionality: 
+* the function `authorized_user` will check whether a passed `token: HTTPAuthorizationCredentials` is valid
+* this validation is done by *asking* Githubs OAuth API.
+* If the validation in `Depends(...)` is not met `authorized_user` will return an `401` (Not Authorized) response.
+The whole code to handle this process look the following in FastAPI (everything behind `Depends(...)`, to secure subsequent routes as well):
+````Python
+def get_user_data(self, token: str) -> helpers.AuthorizedResponse:
+    return helpers.AuthorizedResponse(
+        access_token=token,
+        **json.loads(
+            request(
+                method="get",
+                url=self.USER_ENDP_URL,
+                headers={"Authorization": "token {0}".format(token)}
+            ).text
+        )
+    )
+
+def authorized_user(
+    self, token: HTTPAuthorizationCredentials = Depends(token_bearer)
+) -> helpers.AuthorizedResponse:
+    user = self.get_user_data(token.credentials)
+    if not all([user.id is not None, user.login is not None]):
+        raise HTTPException(
+            status_code=HTTP_401_UNAUTHORIZED,
+            detail="Not authenticated",
+            headers={"WWW-Authenticate": "Bearer"},
+        )
+    return helpers.AuthorizedResponse(
+        access_token=token.credentials,
+        id=user.id,
+        login=user.login,
+    )
 ````
 
 ## example

@@ -62,14 +62,15 @@ params:
       URL: "https://github.com/arrrrrmin/arrrrrmin.netlify.com/blob/main/content/"
       Text: "Suggest Changes" # edit text
       appendFilePath: true # to append file path to Edit link
-    fuseOpts:
-      isCaseSensitive: false
-      shouldSort: true
-      location: 0
-      distance: 1000
-      threshold: 0.4
-      minMatchCharLength: 0
-      keys: ["title", "summary", "content"] ##  can be less but not more than shown in list
+    
+    # fuseOpts:
+    #   isCaseSensitive: false
+    #   shouldSort: true
+    #   location: 0
+    #   distance: 1000
+    #   threshold: 0.4
+    #   minMatchCharLength: 0
+    #   keys: ["title", "permalink", "summary", "content"] ##  can be less but not more than shown in list
     
     # assets:
     #     favicon: "static/favicon.ico"
@@ -96,8 +97,8 @@ params:
           url: "/posts/"
         - name: portfolio
           url: "/portfolio"
-        - name: archive
-          url: "/archive"
+        - name: search
+          url: "/search"
 
     # home-info mode
     homeInfoParams:

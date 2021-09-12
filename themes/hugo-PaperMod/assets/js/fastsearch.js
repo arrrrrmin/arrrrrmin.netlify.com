@@ -26,7 +26,7 @@ window.onload = function () {
                             'content'
                         ]
                     };
-                    if (params.fuseOpts) options = params.fuseOpts;
+                    // if (params.fuseOpts) options = params.fuseOpts;
                     fuse = new Fuse(data, options); // build the index from the json file
                 }
             } else {
