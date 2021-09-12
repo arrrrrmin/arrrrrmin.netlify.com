@@ -1,6 +1,6 @@
 baseURL: "https://arrrrrmin.netlify.app"
 title: "hi i'm armin"
-paginate: 10
+paginate: 5
 theme: hugo-PaperMod
 
 enableRobotsTXT: true
@@ -8,27 +8,74 @@ buildDrafts: false
 buildFuture: false
 buildExpired: false
 
+menu:
+    main:
+        - name: Posts
+          url: posts/
+          weight: 5
+        - name: Portfolio
+          url: portfolio
+          weight: 10
+        - name: Search
+          url: search
+          weight: 10
+
+outputs:
+    home:
+        - HTML
+        - RSS
+        - JSON
+
+markup:
+    goldmark:
+        renderer:
+            unsafe: true
+            
 googleAnalytics: ""
 
 minify:
     disableXML: true
     minifyOutput: true
-
+    
 params:
-    env: production # to enable google analytics, opengraph, twitter-cards and schema.
-    title: "freelancer portfolio"
-    description: "I'm armin. Welcome to my freelancer portfolio."
+    env: production # to enable opengraph, twitter-cards and schema.
+    title: "arrrrrmin.netlify.app"
+    description: "I'm armin, welcome to my very small thinking, working, developing, region of interest bubble in which I learn and document all kinds of things."
     author: "arrrrrmin"
 
     images: "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4"
 
     ShowReadingTime: true
     ShowShareButtons: false
+    ShowToc: true
+    TocOpen: true
+    hideSummary: false
+    hidemeta: false
+    ShowBreadCrumbs: true
+    ShowCodeCopyButtons: true
     comments: false
+    ShowPostNavLinks: true
     defaultTheme: auto
     disableThemeToggle: false
     disableSpecial1stPost: false
-
+    editPost:
+      URL: "https://github.com/arrrrrmin/arrrrrmin.netlify.com/blob/main/content/"
+      Text: "Suggest Changes" # edit text
+      appendFilePath: true # to append file path to Edit link
+    outputs:
+      home:
+        - HTML
+        - RSS
+        - JSON # is necessary
+    # fuseOpts:
+    #   isCaseSensitive: false
+    #   shouldSort: true
+    #   location: 0
+    #   distance: 1000
+    #   threshold: 0.4
+    #   minMatchCharLength: 0
+    #   keys: ["title", "permalink", "summary", "content"] ##  can be less but not more than shown in list
+    
     # assets:
     #     favicon: "static/favicon.ico"
     #     favicon16x16: "static/favicon16x16.png"
@@ -38,38 +85,35 @@ params:
 
     label:
         text: "Home"
-        icon: "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4" # "/apple-touch-icon.png"
+        icon: "" # "/apple-touch-icon.png"
         iconHeight: 60
 
     # profile-mode
     profileMode:
         enabled: false
-        title: "<Title>" # optional default will be site title
-        imageUrl: "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4" # optional
-        imageTitle: "<title of image as alt>" # optional
+        title: "arrrrrmin.netlify.app" # optional default will be site title
+        imageUrl: "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4"  # optional
+        imageTitle: "UserImage" # optional
         imageWidth: 120 # custom size
         imageHeight: 120 # custom size
         buttons:
-            - name: Archive
-              url: "/archive"
-            - name: Github
-              url: "https://github.com/"
-        socialIcons: # optional
-            - name: "Twitter"
-              url: "https://twitter.com/arrrrrmin"
-            - name: "Linkedin"
-              url: "https://www.linkedin.com/in/armin-müller-von-fischer-7581a8165/"
+        - name: posts
+          url: "/posts/"
+        - name: portfolio
+          url: "/portfolio"
+        - name: archive
+          url: "/archive"
 
     # home-info mode
     homeInfoParams:
         Title: "Hi there \U0001F44B "
-        Content: "I'm armin, a freelancing data scientist this is my portfolio"
+        Content: "I'm armin, welcome to my very small thinking, working, developing, region of interest bubble in which I learn and document all kinds of things."
 
     socialIcons:
-        - name: twitter
-          url: "https://twitter.com/arrrrrmin"
         - name: github
           url: "https://github.com/arrrrrmin"
+        - name: twitter
+          url: "https://twitter.com/arrrrrmin"
         - name: linkedin
           url: "https://www.linkedin.com/in/armin-müller-von-fischer-7581a8165/"
 
