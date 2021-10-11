@@ -1,5 +1,5 @@
 baseURL: "https://arrrrrmin.netlify.app"
-title: "hi i'm armin"
+title: "arrrrrmin"
 paginate: 5
 theme: hugo-PaperMod
 
@@ -51,8 +51,8 @@ params:
     comments: false
     ShowPostNavLinks: true
     defaultTheme: auto
-    disableThemeToggle: false
-    disableSpecial1stPost: false
+    disableThemeToggle: true
+    disableSpecial1stPost: true
     editPost:
       URL: "https://github.com/arrrrrmin/arrrrrmin.netlify.com/blob/main/content/"
       Text: "Suggest Changes" # edit text
