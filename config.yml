@@ -85,8 +85,8 @@ params:
         title: "arrrrrmin.netlify.app" # optional default will be site title
         imageUrl: "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4"  # optional
         imageTitle: "UserImage" # optional
-        imageWidth: 120 # custom size
-        imageHeight: 120 # custom size
+        imageWidth: 150 # custom size
+        imageHeight: 150 # custom size
         buttons:
         - name: posts
           url: "/posts/"
