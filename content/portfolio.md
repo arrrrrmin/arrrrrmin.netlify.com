@@ -49,7 +49,6 @@ Tools, libs and other things I like to work with.
 
 From time to time I try to help the open source community and support nice projects, used by many of us. Sadly I'm not taking as much time as I'd like to. 
 
-* [`convmoji`](https://pypi.org/project/convmoji/) a simple cli tool to commit Conventional Commits.
 * [`moto`](https://github.com/spulec/moto) mocking aws services for testing code, that relys on aws artifacts, without hitting actual endpoints.
 * [`albert`](https://github.com/google-research/albert) google-research repo to provide base implementation to pretraining albert transformers.
 
