@@ -10,7 +10,7 @@ summary: portfolio
 
 Python Developer 🐍 • Freelancer 🚀 • Electronic Music Nerd 🎛️
 
-## About me
+# About me
 
 I'm *arrrrrmin*, a **freelancing data scientist** with interest in NLP projects, python, data pipelines and web development. Since 2018 I work for different customers on various projects as a freelancer. Mostly things boil down to data analysis and machine learning techniques to provide deep learning solutions for my customers problems. In 2018 I also started working on a StartUp idea called [KnowKit](https://www.knowkit.com). As a team of 9 people we work on different NLP topics that mostly target semantic text spaces and natural language understanding (NLU).
 
