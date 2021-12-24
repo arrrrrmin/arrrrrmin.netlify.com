@@ -15,9 +15,20 @@ moto = "^2.2.9"
 pytest = "^5.2"
 black = "^21.9b0"
 devtools = "^0.8.0"
+poethepoet = "^0.10.0"
+flake8 = "^4.0.1"
+flake8-unused-arguments = "^0.0.6"
 
 [tool.black]
 line-length = 90
+
+[tool.poe.tasks]
+format = "black python_examples/"
+lint = [
+  { cmd = "black python_examples/ --check --diff --verbose" },
+  { cmd = "flake8 python_examples/" },
+]
+build-md = "python build.py"
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
