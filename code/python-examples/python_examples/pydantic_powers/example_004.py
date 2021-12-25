@@ -29,6 +29,11 @@ class S3Uri(BaseModel):
     path: typing.Optional[str]  # suffix after bucket
     key: typing.Optional[str]  # file key
 
+    # Use @validator defined below
+    _validate_bucket = validator("bucket", allow_reuse=True)(validate_non_key_file_string)
+    _validate_path = validator("path", allow_reuse=True)(validate_non_key_file_string)
+
+    # Please note: root validators are always executed on model creation
     @root_validator
     def validate_root_uri(cls, values):  # noqa: U100
         # Most of time you won't use cls, so make sure it doesn't break linting
@@ -46,10 +51,6 @@ class S3Uri(BaseModel):
         if "." in uri_parts[-1]:
             values["key"] = uri_parts[-1]
         return values
-
-    # Now you could also validate bucket, path and key parts individually
-    _validate_bucket = validator("bucket", allow_reuse=True)(validate_non_key_file_string)
-    _validate_path = validator("path", allow_reuse=True)(validate_non_key_file_string)
 
     @validator("key")
     def validate_non_key_file_string(cls, v: str):  # noqa: U100

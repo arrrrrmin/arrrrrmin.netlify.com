@@ -6,16 +6,17 @@ summary: "Some awesome tips and tricks one can do with pydantic. Data validation
 weight: -2
 ---
 
-This is my personal though and development bubble, so let's talk 
+This is my personal thought and development bubble, so let's look at
 [Pydantic](https://github.com/samuelcolvin/pydantic)! 
 Since I first used [FastAPI](https://github.com/tiangolo/fastapi) I'm a huge fan of 
 [Pydantic](https://github.com/samuelcolvin/pydantic). Basically it's about data 
 validation. As a developer it's often about recieving data from somewhere, doing something
 with it and passing it on to somewhere else. When recieving data, I like to know if it 
 follows the structure I expect. When sending stuff elsewhere, I'd like to make sure 
-everything is following some other structure. 
+everything is following a structure. So pydantic was a handy way to ensure these i/o
+patterns.
 
-> TL;DR: pydantic models are a lot of fun! 
+> TL;DR: pydantic models enable handy, standardized data wrapping and validation!
 
 # Basics
 
@@ -197,6 +198,11 @@ class S3Uri(BaseModel):
     path: typing.Optional[str]  # suffix after bucket
     key: typing.Optional[str]  # file key
 
+    # Use @validator defined below
+    _validate_bucket = validator("bucket", allow_reuse=True)(validate_non_key_file_string)
+    _validate_path = validator("path", allow_reuse=True)(validate_non_key_file_string)
+
+    # Please note: root validators are always executed on model creation
     @root_validator
     def validate_root_uri(cls, values):  # noqa: U100
         # Most of time you won't use cls, so make sure it doesn't break linting
@@ -215,10 +221,6 @@ class S3Uri(BaseModel):
             values["key"] = uri_parts[-1]
         return values
 
-    # Now you could also validate bucket, path and key parts individually
-    _validate_bucket = validator("bucket", allow_reuse=True)(validate_non_key_file_string)
-    _validate_path = validator("path", allow_reuse=True)(validate_non_key_file_string)
-
     @validator("key")
     def validate_non_key_file_string(cls, v: str):  # noqa: U100
         # Here we always need a "." in key file string
@@ -227,12 +229,12 @@ class S3Uri(BaseModel):
                 "Length provided should support at least 1 character and has to contain "
                 "file suffix with '.'"
             )
-        return v
 ```
 
 You can run this code as is, which can be used like so:
 
 ```Python
+        return v
 
 
 if __name__ == "__main__":
@@ -261,10 +263,10 @@ break it into pieces and fill our optional parameters. By nature an S3Uri needs 
 which we'll enforce here:
 
 ```Python
-        if uri_length < 3 and len(uri_parts[2]) > 0:
-            raise ValueError(
-                "S3 URIs must provide at least a bucket. Failed with uri: {0}".format(uri)
-            )
+        # Most of time you won't use cls, so make sure it doesn't break linting
+        uri: str = validate_s3_scheme(values.get("uri"))
+        uri_parts: typing.List[str] = uri.split("/")
+        # Expect: uri_parts = ["s3:", "", "bucket_name", "folder_name", "key_file.json"]
 ```
 
 Everything else below is just to see wether or not our parsed vales fullfill what we 

@@ -6,16 +6,17 @@ summary: "Some awesome tips and tricks one can do with pydantic. Data validation
 weight: -2
 ---
 
-This is my personal though and development bubble, so let's talk 
+This is my personal thought and development bubble, so let's look at
 [Pydantic](https://github.com/samuelcolvin/pydantic)! 
 Since I first used [FastAPI](https://github.com/tiangolo/fastapi) I'm a huge fan of 
 [Pydantic](https://github.com/samuelcolvin/pydantic). Basically it's about data 
 validation. As a developer it's often about recieving data from somewhere, doing something
 with it and passing it on to somewhere else. When recieving data, I like to know if it 
 follows the structure I expect. When sending stuff elsewhere, I'd like to make sure 
-everything is following some other structure. 
+everything is following a structure. So pydantic was a handy way to ensure these i/o
+patterns.
 
-> TL;DR: pydantic models are a lot of fun! 
+> TL;DR: pydantic models enable handy, standardized data wrapping and validation!
 
 # Basics
 

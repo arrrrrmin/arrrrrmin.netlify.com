@@ -5,6 +5,7 @@ import typing
 
 examples_dir = pathlib.Path("python_examples")
 post_dirs: typing.List[str] = [
+    "albert_pretraining",
     "pydantic_powers",
     "github_oath_fastapi",
     "moto_mocks",
