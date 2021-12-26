@@ -40,15 +40,15 @@ Moto's magic comes in at:
 {! ./python_examples/moto_mocks/example_001.py [ln:15-16] !}
 ````
 
-where a transcription job is started and to check it with pytest `get_transcription_job()`
+where the transcription job is started. To check it with pytest, `get_transcription_job()`
 is called to get the response from the aws transcribe endpoint. Like this we can check a
 job was started somewhere in our code. 
 
-> The only thing one has to care about is that `@mock_transcribe` is called befor the 
+> The only thing one has to care about: `@mock_transcribe` has to be called before the 
 > `boto.client("transcribe")`-connection is established. If not, 
 > [`boto`](https://boto3.amazonaws.com/v1/documentation/api/latest/reference/services/transcribe.html)
-> tries to hit the actual endpoint which will fail in integration tests that run in a
-> github action.
+> tries to hit the actual endpoint which will fail in integration tests (e.g. github 
+> actions).
 
 # Working with `conftest.py`
 
@@ -80,3 +80,12 @@ fixtures like so:
 {! ./python_examples/moto_mocks/example_002.py [ln:36-] !}
 ````
 
+# Service coverage
+
+Moto doesn't cover all AWServies. There are certain services that are more well covered 
+then others. Imho, when my service and usecases are supported by moto, I'll always opt to
+use moto over alternatives like localstack, as I find it convinient to simply add moto as
+a dev dependency to poetry and simply be happy with it.
+
+> You can find a list of supported services on function-level in 
+> [motos github repo](https://github.com/spulec/moto/blob/master/IMPLEMENTATION_COVERAGE.md)
