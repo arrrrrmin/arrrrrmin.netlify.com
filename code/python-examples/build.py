@@ -9,6 +9,7 @@ post_dirs: typing.List[str] = [
     "pydantic_powers",
     "github_oath_fastapi",
     "moto_mocks",
+    "oauth_at_cloudfront",
 ]
 
 
