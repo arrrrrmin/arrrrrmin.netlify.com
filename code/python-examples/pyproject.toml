@@ -11,6 +11,7 @@ mdx-include = "^1.4.1"
 pydantic = "^1.8.2"
 moto = "^2.2.9"
 sentencepiece = "^0.1.96"
+python-jose = "^3.3.0"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
