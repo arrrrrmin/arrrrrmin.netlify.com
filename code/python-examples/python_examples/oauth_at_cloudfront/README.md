@@ -167,7 +167,7 @@ Here is what the `lambda_handler(...)` looks like:
 
 ````Python
 {! ./python_examples/oauth_at_cloudfront/example_001.py [ln:34-41] !}
-{! ./python_examples/oauth_at_cloudfront/example_001.py [ln:193-221] !}
+{! ./python_examples/oauth_at_cloudfront/example_001.py [ln:190-221] !}
 ````
 
 With the `REDIRECT_302` response, cloudfront will redirect users to the `uri` in 

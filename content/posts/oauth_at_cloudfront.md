@@ -323,6 +323,9 @@ REDIRECT_302 = {
 
 # On failure return the following response
 DEFAULT_RESPONE = REDIRECT_302
+
+def lambda_handler(event, context):
+    """Lambda handler"""
     cf_request = event["Records"][0]["cf"]["request"]
     headers = cf_request["headers"]
     header_check = check_headers(headers)
