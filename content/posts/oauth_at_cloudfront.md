@@ -230,8 +230,6 @@ class TokenVerifier:
             )
 
         return verified
-
-
 ````
 
 The decoded token returned by `verify_token(...)` will be a dictionary, which will hold
@@ -253,6 +251,8 @@ required_user_info = (
     "username",
 )
 
+def check_token_access(access_token: Dict) -> bool:
+    """Check token contents (user_info and expectation)"""
     # Check if all required user_info is present in token
     if not all(
         [
@@ -270,8 +270,6 @@ required_user_info = (
     ):
         return False
     return True
-
-
 ````
 
 ## Further checks
@@ -285,9 +283,6 @@ passed token. Here one can do different things here some examples:
 Some ideas:
 
 ````Python
-    return token["sub"] in cloud_front_request["request"]["uri"]
-
-
 def check_authorized_group(
     cloud_front_request: Dict, token: Dict, path_modifier: Callable = hashlib.md5
 ) -> bool:
@@ -296,8 +291,6 @@ def check_authorized_group(
     if path_modifier:
         token_group = path_modifier(token_group)
     return token_group in cloud_front_request["request"]["uri"]
-
-
 ````
 
 # Wrap it up
@@ -306,9 +299,10 @@ Lastly we remove the Authentication header, so Cloudfront can handle the request
 by passing the input request back to Cloudfront.
 
 ````Python
+def modify_request(cloud_front_request: Dict) -> Dict:
+    """Remove header from viewer request for cloudfronts origin request"""
     del cloud_front_request["headers"]["authorization"]
     return cloud_front_request
-
 
 ````
 

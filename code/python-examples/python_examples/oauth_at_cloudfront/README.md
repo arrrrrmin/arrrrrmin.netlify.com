@@ -126,7 +126,7 @@ If you want to see where the `TokenVerifier` code came from have a look at
 [`pycognito`](https://github.com/pvizeli/pycognito).
 
 ````Python
-{! ./python_examples/oauth_at_cloudfront/example_001.py [ln:57-129] !}
+{! ./python_examples/oauth_at_cloudfront/example_001.py [ln:57-127] !}
 ````
 
 The decoded token returned by `verify_token(...)` will be a dictionary, which will hold
@@ -137,7 +137,7 @@ the tokens content. This could look like this:
 ````Python
 {! ./python_examples/oauth_at_cloudfront/example_001.py [ln:43-54] !}
 
-{! ./python_examples/oauth_at_cloudfront/example_001.py [ln:151-169] !}
+{! ./python_examples/oauth_at_cloudfront/example_001.py [ln:149-167] !}
 ````
 
 ## Further checks
@@ -151,7 +151,7 @@ passed token. Here one can do different things here some examples:
 Some ideas:
 
 ````Python
-{! ./python_examples/oauth_at_cloudfront/example_001.py [ln:172-184] !}
+{! ./python_examples/oauth_at_cloudfront/example_001.py [ln:175-182] !}
 ````
 
 # Wrap it up
@@ -160,7 +160,7 @@ Lastly we remove the Authentication header, so Cloudfront can handle the request
 by passing the input request back to Cloudfront.
 
 ````Python
-{! ./python_examples/oauth_at_cloudfront/example_001.py [ln:187-190] !}
+{! ./python_examples/oauth_at_cloudfront/example_001.py [ln:185-189] !}
 ````
 
 Here is what the `lambda_handler(...)` looks like:
