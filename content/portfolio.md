@@ -5,7 +5,6 @@ url: "/portfolio/"
 summary: portfolio
 ---
 
-
 # TLDR
 
 Python Developer 🐍 • Freelancer 🚀 • Electronic Music Nerd 🎛️
