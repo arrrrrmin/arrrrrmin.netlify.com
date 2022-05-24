@@ -43,7 +43,7 @@ Tools, libs, services and other things I know and like to work with.
 | [`d3.js`](https://d3js.org), [`chart.js`](https://www.chartjs.org), [`pyplot`](https://matplotlib.org/api/pyplot_api.html) | Data Vis. | Data visualizations, visual correlations in data |
 | [`React`](https://reactjs.org), [`Next.Js`](https://nextjs.org) | Frontend | Frontend Development in javascript and typescript |
 | [`AWS`](https://aws.amazon.com/), [`Heroku`](https://www.heroku.com/), [`Netlify`](https://www.netlify.com), [`aws-cdk`](https://docs.aws.amazon.com/cdk/) | Infra | SageMaker, ECS, ECR, Cognito, Cloudfront, RDS/DynamoDB, IOT-*, Heroku for prototypeing infra and netlify for frontend hosting |
-| [`jupyter`](https://jupyter.org), [`BigQuery`](https://cloud.google.com/bigquery/), [OpenSearch](https://opensearch.org), [`Git`](https://git-scm.com), [`Docker`](https://www.docker.com), `...` | Utilities | All kinds of other features for all diverse cases, ...  |
+| [`jupyter`](https://jupyter.org), [`BigQuery`](https://cloud.google.com/bigquery/), [`OpenSearch`](https://opensearch.org), [`Git`](https://git-scm.com), [`Docker`](https://www.docker.com), `...` | Utilities | All kinds of other features for all diverse cases, ...  |
 
 # Open Source
 
