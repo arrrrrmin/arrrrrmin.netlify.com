@@ -3,3 +3,4 @@ public/
 .idea/
 __pycache__
 .pytest_cache
+.hugo_build.lock

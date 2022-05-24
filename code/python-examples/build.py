@@ -10,6 +10,7 @@ post_dirs: typing.List[str] = [
     "github_oath_fastapi",
     "moto_mocks",
     "oauth_at_cloudfront",
+    "sign_cf_cookies",
 ]
 
 

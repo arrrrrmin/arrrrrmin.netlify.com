@@ -1,0 +1,31 @@
+@startuml
+autonumber
+actor User
+User -> API: Request with access token
+API -> Cognito: Check token
+Cognito --> API: Token verified
+note right of API: A database could hold information for other users
+note right of API
+Signed cookie authorizeds user for resource/path/*
+with an expiration time
+end note
+note right of API
+Cookie is signed with private key (known only to the api)
+and references Public Key Id
+end note
+API --> API: Sign a cookie for resource/path/*
+API --> User: Set signed cookie
+User -> Cloudfront: Access resource/path/example.png
+note right of Cloudfront
+CloudFront-Key-Pair-Id refences the public key stored
+in Cloudfronts associated Trusted Key Group
+end note
+note right Cloudfront
+"CloudFront-Policy": CLOUDFRONT_POLICY,
+"CloudFront-Signature": CLOUDFRONT_SIGNATURE,
+"CloudFront-Key-Pair-Id": CLOUDFRONT_PUBLIC_KEY_ID,
+end note
+Cloudfront --> Cloudfront: Verify Cookie
+Cloudfront --> S3: Grant access to actual example.png
+@enduml
+
