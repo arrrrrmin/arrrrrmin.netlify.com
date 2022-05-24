@@ -16,7 +16,7 @@
 .post-meta,
 .breadcrumbs {
     color: var(--secondary);
-    font-size: 14px;
+    font-size: 12px;
     display: flex;
     flex-wrap: wrap;
 }
@@ -29,7 +29,7 @@
 }
 
 .breadcrumbs a {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .post-content {
@@ -84,7 +84,7 @@
 .post-content p,
 .post-content figure,
 .post-content ul {
-    margin-bottom: var(--content-gap);
+    margin-bottom: 10px;
 }
 
 .post-content ol,
@@ -194,7 +194,7 @@
 .post-content code {
     margin: auto 4px;
     padding: 4px 6px;
-    font-size: 0.78em;
+    font-size: 0.90em;
     line-height: 1.5;
     background: var(--code-bg);
     border-radius: 2px;
