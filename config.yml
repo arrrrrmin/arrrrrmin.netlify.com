@@ -35,7 +35,7 @@ minify:
 params:
     env: production # to enable opengraph, twitter-cards and schema.
     title: "arrrrrmin.netlify.app"
-    description: "I'm armin, welcome to my very small thinking, working, developing, region of interest bubble in which I learn and document all kinds of things."
+    description: "I'm Armin, welcome to my very small thinking, working, developing, region of interest bubble, in which I learn and document all kinds of things."
     author: "arrrrrmin"
 
     images: "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4"
