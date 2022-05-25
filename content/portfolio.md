@@ -7,11 +7,11 @@ summary: portfolio
 
 # TLDR
 
-Python Developer 🐍 • Freelancer 🚀 • Electronic Music Nerd 🎛️
+The name is Armin 👋 • Python Developer 🐍 • Freelancer 🚀 • Electronic Music Nerd 🎛️
 
 # About me
 
-I'm *arrrrrmin*, a **freelancing data scientist** with interest in NLP projects, python, data pipelines and web development. Since 2018 I work for different customers on various projects as a freelancer. Mostly things boil down to data analysis and machine learning or deep learning to provide solutions for customer needs. From 2018 to 2022 I cofounded [KnowKit](https://www.knowkit.com).
+I'm *arrrrrmin* (Armin Müller-von Fischer), **freelancing data scientist** with interest in NLP projects, python, data pipelines and web development. Since 2018 I work for different customers on various projects as a freelancer. Mostly things boil down to data analysis and machine learning or deep learning to provide solutions for customer needs. From 2018 to 2022 I cofounded [KnowKit](https://www.knowkit.com).
 
 # Projects
 
@@ -23,7 +23,7 @@ I'm *arrrrrmin*, a **freelancing data scientist** with interest in NLP projects,
 | Oct.2019 - Dec.2019 | Consulting, design and implementation of predictive application workflows using [**InforOS**]((https://www.infor.com/products/infor-os)) for data organization, querying. [**Coleman AI**](https://www.infor.com/products/coleman) for predictive machine learning model realization. Ontop of InforOS build **AWS** for workflow automatization. | Actinium Consulting GmbH, IT Solution Supplier, Germany |
 | Aug.2019 - Apr.2020 | Semantic **Textclassification** projekt using Google `BERT` for Multilabel-Classification including custom pretraining, **online-learning** and data/model evaluation. Development Process included serversided `jupyter` processes. | None due to NDA, Realestate data analytics supplier, Germany |
 | Feb.2019 - Sep.2019 | Customer Activity predictions based on Deep Neural Network architecture using `tensorflow` and individual churn potentials for every customer. | None due to NDA, Machining solutions supplier, Germany |
-| Okt.2018 - Mär.2019 | Market scale customer classification using `sklearn` classifiers, hosted on an automated AI Platform called [**5Ana**](https://www.5analytics.com/index.html). | None due to NDA, Machining solutions supplier, Germany |
+| Okt.2018 - Mär.2019 | Market scale customer classification using `sklearn` classifiers, hosted on an automated AI Platform called 5Ana. | None due to NDA, Machining solutions supplier, Germany |
 | Aug.2017 | artVIS: An Interactive Visualization for Painting Collections, Paper On [**The ViNCI Symposium 2017**](http://vinci-conf.org/2017/program.html#session4) | HS Reutlingen, Student, ViNCI Conference (Bangkok) |
 
 # Skills
@@ -46,8 +46,9 @@ Tools, libs, services and other things I know and like to work with.
 
 # Languages
 
-* English, German, Python, JavaScript, TypeScript
-* And a tiny bit of: Go, R and Java
+* German and English
+* [`Python`](https://www.python.org), [`JavaScript`](https://nodejs.org/en/), [`TypeScript`](https://www.typescriptlang.org)
+* And a tiny bit of: [`Go`](https://go.dev), [`R`](https://www.r-project.org) and [`Java`](https://www.oracle.com/java/)
 
 # Open Source
 
