@@ -18,7 +18,8 @@ which are used to grant access on single resources, whereas this example shows h
 
 ## Overview
 
-![Overview](http://www.plantuml.com/plantuml/png/RLDBRzf04BxxLqnpQgkuEVIMGnLA7h8I1SIZKavei0UymjvnTsUJq5_VMJlKXd8n8_lRx_7DSkC5dOIwIZv9IJL1Kw6n2GPX6-erkGHpOGTBhsDyGFe3HjFi6cRqEv0NU3DI0kOvUG_2ExA9VeweCM-j4Rw6SKdvxkFRnqj83pIB-1fUoPcDeIAnB0JER4i1tdI84HGek4PFa7Ee2YXP7yPksDKeXYte1Aps7GHrwFydIUPcQwdGyxmp19gkP6V-KE7R4os18y_1vNJLe9HNNvCkbmLwRuphTCJKb90j80gSKHbtzCQ3x_HQZiQPLrJeZlRmUMVvpGBRQW_2e9u16_CbGILrj257Lek4QLXN9eT7FP4LlQ9gzCN5I827IESI7E1nROed0J-iuTywnnM7OkFOYfRTBVAOYjwnRYhwrjZjIUh-QDAEzt5CrNSwHUFIh4iLCxLPcovNRC8BEzstiGCE3-WzvmP5JIvSyFhRbl3WE3JdcXyQk1WucBBgx2_qxZrDbhVtiydpOZMTF6NZbyiZN2mH9JWwXiwpX-VHOZcxK_JvN2VKov_AlNgyUrbbjvUzqTuTf2T5_uetVW_TbJa5phzVQsQqql-nT9A05GntSQD2eQx-0W00)
+![Overview](/overview.png)
+
 The overview image is just a summary and does not include entities like `AppClient`, `PublicKey` or `KeyGroup`.
 These are listed and showen below in the [infra setup](#infra-setup)
 
