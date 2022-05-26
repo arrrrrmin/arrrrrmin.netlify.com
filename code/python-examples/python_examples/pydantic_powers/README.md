@@ -134,3 +134,26 @@ example:
 
 Like this it's possible to use snake- and camel-case naming when passing data. There is a 
 lot more to explore at [Pydantic documentation](https://pydantic-docs.helpmanual.io).
+
+
+# Configs
+
+Another nice feature: `BaseSettings`. Configurations can be added and validated using 
+pydantics `BaseSettings`. In addition one can install `pip install pydantic[dotenv]`, to 
+read settings from a `.env` file. This comes in especially handy when building a fastapi.
+
+```Python
+{! ./python_examples/pydantic_powers/example_006.py !}
+```
+
+# Secrets
+
+Building APIs often includes Secrets, which under no circumstances should be leaked. Therefore
+pydantic provides `SecretStr` class, which is nice to be sure that secret values are only 
+viewable if really needed. The following example reads a secret from AWS Secretsmanager, using
+`boto3` in a `root_validator` and holds it in a `BaseSetting` class.
+
+```Python
+{! ./python_examples/pydantic_powers/example_007.py !}
+```
+
