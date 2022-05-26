@@ -6,7 +6,7 @@ summary: "A guide to understand how pretraining transformer models work. It's ba
 weight: 0
 ---
 
-# Environments setups and configuration objects
+# Environments setups and configs
 
 ## Environments
 
