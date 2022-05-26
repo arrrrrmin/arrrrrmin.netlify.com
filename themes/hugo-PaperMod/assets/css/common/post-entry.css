@@ -32,6 +32,8 @@
 
 .home-info .entry-content {
     -webkit-line-clamp: unset;
+    max-width: 600px;
+    text-align: center;
 }
 
 .post-entry {
