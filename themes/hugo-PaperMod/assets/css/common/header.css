@@ -14,7 +14,7 @@
     line-height: var(--header-height);
     /* border-bottom: 1px var(--secondary) solid; */
     border-radius: 0 0 var(--radius) var(--radius);
-    background-color: var(--content);
+    background-color: var(--hljs-bg);
     /* border-radius: 0 0 calc(var(--radius)/ 2) calc(var(--radius)/ 2); */
 }
 
