@@ -18,7 +18,7 @@ which are used to grant access on single resources, whereas this example shows h
 
 ## Overview
 
-![Overview](/overview.png)
+![Overview](/sign_cf_cookies.png)
 
 The overview image is just a summary and does not include entities like `AppClient`, `PublicKey` or `KeyGroup`.
 These are listed and showen below in the [infra setup](#infra-setup)

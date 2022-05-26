@@ -45,7 +45,7 @@ poetry add git+ssh://git@github.com:samuelcolvin/pydantic.git#4be3f45
 poetry add -D black flake8 flake8-unused-arguments pytest
 ````
 
-## pyproject.toml
+# `pyproject.toml`
 
 These commands will result in a `pyproject.toml` update which will look somewhat like:
 
@@ -76,7 +76,7 @@ build-backend = "poetry.core.masonry.api"
 If you now want to access the env poetry created, simply do `poetry shell`. It's the same
 as `source env/bin/activate`, when working with `venv`. 
 
-## poe the poet
+# `poe the poet`
 
 Our `pyproject.toml` is also a nice place to have tooling config in. I personally like
 [poe the poet](https://pypi.org/project/poethepoet/). I found this to be one of the 

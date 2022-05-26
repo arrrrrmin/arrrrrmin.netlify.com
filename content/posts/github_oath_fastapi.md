@@ -10,7 +10,7 @@ In a recent project I had to add githubs code-based oauth to an API. To solve th
 wanted to have a little more insight into, how FastAPI supports developers with this 
 process.
 
-## create some github oauth app
+## Create some github oauth app
 
 * Log into github
 * Settings > Developer Settings > Oauth Apps > New oauth App
@@ -25,7 +25,7 @@ process.
 * Put it into and `.env`
 * Take a look at the github documentation @ [https://docs.github.com/](https://docs.github.com/en/developers/apps/building-oauth-apps/creating-an-oauth-app)
 
-## web application flow
+## Web application flow
 
 > The device flow isn't covered here at all. This example shows a simple web application 
 > flow using fastapis onboard utilities.
@@ -51,7 +51,7 @@ async def auth_login(code: str):
     }
 ````
 
-## securing routes with a dependency
+## Securing routes with a dependency
 * Use `HttpBearer`, to bear the token and use it as dependency for our routes
 * These routes are only accessible for authenticated users (requests with valid `access_token`) 
 * See the example with `secure/content`

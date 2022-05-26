@@ -13,12 +13,9 @@ Meaning there should be some sort of authentication using some Identity Provider
 In adition the access control should be able to support grouping to bundle access rights 
 for the content. 
 
-
 > [**TL;DR Just give me code**](https://github.com/arrrrrmin/cloudfront-cognito-auth)
 
-There is a pretty nice overview diagram on the 
-[aws blog](https://aws.amazon.com/blogs/networking-and-content-delivery/authorizationedge-using-cookies-protect-your-amazon-cloudfront-content-from-being-downloaded-by-unauthenticated-users/).
-![Overview diagram](https://d2908q01vomqb2.cloudfront.net/5b384ce32d8cdef02bc3a139d4cac0a22bb029e8/2019/08/14/OAUTH-DIAGRAM3-1024x688.png)
+![Overview](/oauth_at_cloudfront.png)
 
 The articles approach uses cookies to store tokens, which are validated using a lambda@edge. 
 Maybe that's the better approach to take. For my usecase it's ok to send an access token in 
