@@ -1,7 +1,9 @@
 .header {
     position: sticky;
     top: 0;
+    width: 100%;
     z-index: 999;
+    background-color: var(--hljs-bg);
 }
 
 .nav {
@@ -9,12 +11,11 @@
     flex-wrap: wrap;
     justify-content: space-between;
     max-width: calc(var(--nav-width) + var(--gap) * 2);
+    padding-inline-start: auto;
+    padding-inline-end: auto;
+    line-height: var(--header-height);
     margin-inline-start: auto;
     margin-inline-end: auto;
-    line-height: var(--header-height);
-    /* border-bottom: 1px var(--secondary) solid; */
-    border-radius: 0 0 var(--radius) var(--radius);
-    background-color: var(--hljs-bg);
     /* border-radius: 0 0 calc(var(--radius)/ 2) calc(var(--radius)/ 2); */
 }
 
