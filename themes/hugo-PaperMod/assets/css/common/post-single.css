@@ -367,11 +367,43 @@ h3:hover .anchor,
 h4:hover .anchor,
 h5:hover .anchor,
 h6:hover .anchor {
-    display: inline-flex;
+    display: inline-block;
     color: var(--secondary);
     margin-inline-start: 8px;
     font-weight: 500;
 }
+
+h1:hover .anchor{
+    font-size: 40px;
+    line-height: 1;
+}
+
+h2:hover .anchor{
+    font-size: 32px;
+    line-height: 1;
+}
+
+h3:hover .anchor{
+    font-size: 24px;
+    line-height: 1;
+}
+
+h4:hover .anchor{
+    font-size: 16px;
+    line-height: 1;
+}
+
+h5:hover .anchor{
+    font-size: 14px;
+    line-height: 1;
+}
+
+h6:hover .anchor{
+    font-size: 12px;
+    line-height: 1;
+}
+
+
 
 .paginav {
     margin: 10px 0;
