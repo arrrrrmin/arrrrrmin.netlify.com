@@ -197,7 +197,7 @@
     padding: 4px 6px;
     font-size: 0.90em;
     line-height: 1.5;
-    background: var(--code-bg);
+    background: var(--tertiary);
     border-radius: 2px;
 }
 
