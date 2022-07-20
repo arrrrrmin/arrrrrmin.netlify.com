@@ -1,0 +1,51 @@
+/**
+ * @license
+ *
+ * Font Family: Nunito
+ * Designed by: Vernon Adams, Cyreal, Jacques Le Bailly
+ * URL: https://www.fontshare.com/fonts/nunito
+ * © 2022 Indian Type Foundry
+ *
+ * Font Style:
+ * Nunito Extra Bold
+ *
+*/
+
+/** Used for headings */
+
+@font-face {
+    font-family: 'Nunito-ExtraBold';
+    src: url('../../fonts/Nunito-ExtraBold.woff2') format('woff2'),
+         url('../../fonts/Nunito-ExtraBold.woff') format('woff'),
+         url('../../fonts/Nunito-ExtraBold.ttf') format('truetype');
+         font-weight: 800;
+         font-display: swap;
+         font-style: normal;
+  }
+
+
+/**
+ * @license
+ *
+ * Font Family: Supreme
+ * Designed by: Jérémie Hornus, Ilya Naumoff
+ * URL: https://www.fontshare.com/fonts/supreme
+ * © 2022 Indian Type Foundry
+ *
+ * Font Style:
+ * Supreme Regular
+ *
+*/
+
+/** Used for body */
+
+@font-face {
+    font-family: 'Supreme-Regular';
+    src: url('../../fonts/Supreme-Regular.woff2') format('woff2'),
+         url('../../fonts/Supreme-Regular.woff') format('woff'),
+         url('../../fonts/Supreme-Regular.ttf') format('truetype');
+         font-weight: 400;
+         font-display: swap;
+         font-style: normal;
+  }
+  

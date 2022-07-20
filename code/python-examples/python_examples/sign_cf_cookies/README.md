@@ -118,7 +118,7 @@ Now just we can make it accessible in an api route:
 ````
 
 Since we have `current_user` (which is send by the user in an `Authorization` Header), we can easily obtain an Access
-Token, to check if the user is authorized and further use it's `sub` value to make more checks. One example could be:
+Token, to check if the user is authorized and further use the tokens `sub` value for more checks. One example could be:
 
 > Users can grant other users access and these *connections* are maintained in a database. So if a wants to access 
 > resources which aren't his own, we can check this by asking the database.

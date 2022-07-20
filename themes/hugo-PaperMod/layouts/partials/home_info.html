@@ -1,10 +1,28 @@
 {{- with $.Site.Params.homeInfoParams }}
 <article class="first-entry home-info">
+    {{- if .imageUrl -}}
+    <div class="profile-image">
+        <img src="{{ .imageUrl }}" alt="{{ .imageTitle | default " profile image" }}"
+            height="{{ .imageHeight | default 200 }}" width="{{ .imageWidth | default 200 }}" />
+    </div>
+    {{- end }}
+
     <header class="entry-header">
-        <h1>{{ .Title | markdownify }}</h1>
+        <h1>Hi there I'm <a title href="https://twitter.com/arrrrrmin">@arrrrrmin</a> 👋</h1>
     </header>
     <section class="entry-content">
-        <p>{{ .Content | markdownify }}</p>
+        <!-- <p>{{ .Content | markdownify }}</p> -->
+        <p>
+            I'm a software developer. I enjoy building things with Python,
+            TypeScript (or JavaScript), Deep-/Machine Learning, backend APIs
+            and AWS CDK.
+        </p>
+    </section>
+    <section class="entry-content">
+        <!-- <p>{{ .Content | markdownify }}</p> -->
+        <p>
+            Here I try to document small isolated solutions or processes I came across during work.
+        </p>
     </section>
     <footer class="entry-footer">
         {{ partial "social_icons.html" $.Site.Params.socialIcons }}

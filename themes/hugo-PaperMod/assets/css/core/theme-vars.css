@@ -1,9 +1,9 @@
 :root {
-    --gap: 30px;
+    --gap: 20px;
     --content-gap: 30px;
     --nav-width: 1024px;
-    --main-width: 1024px;
-    --header-height: 48px;
+    --main-width: 720px;
+    --header-height: 60px;
     --footer-height: 72px;
     --radius: 6px;
     --theme: #fff;
@@ -25,7 +25,8 @@
     --tertiary: rgba(255, 255, 255, 0.16);
     --content: rgba(255, 255, 255, 0.74);
     --hljs-bg: #2e2e33;
-    --code-bg: #37383e;
+    --code-bg: #414245;
+    /* --code-bg: #37383e; */
     --border: #333;
 }
 

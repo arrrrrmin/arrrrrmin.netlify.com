@@ -1,5 +1,5 @@
 baseURL: "https://arrrrrmin.netlify.app"
-title: "arrrrrmin"
+title: "arrrrrmin.netlify.app - writing about development, data science, aws"
 paginate: 5
 theme: hugo-PaperMod
 
@@ -10,13 +10,13 @@ buildExpired: false
 
 menu:
     main:
-        - name: Posts
+        - name: posts
           url: posts/
           weight: 5
-        - name: Portfolio
+        - name: portfolio
           url: portfolio
           weight: 10
-        - name: Search
+        - name: search
           url: search
           weight: 10
 
@@ -35,7 +35,7 @@ minify:
 params:
     env: production # to enable opengraph, twitter-cards and schema.
     title: "arrrrrmin.netlify.app"
-    description: "I'm Armin, welcome to my very small thinking, working, developing, region of interest bubble, in which I learn and document all kinds of things."
+    description: "Writing about development, data science, aws"
     author: "arrrrrmin"
 
     images: "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4"
@@ -50,8 +50,8 @@ params:
     ShowCodeCopyButtons: true
     comments: false
     ShowPostNavLinks: true
-    defaultTheme: auto
-    disableThemeToggle: true
+    defaultTheme: light
+    disableThemeToggle: false
     disableSpecial1stPost: true
     editPost:
       URL: "https://github.com/arrrrrmin/arrrrrmin.netlify.com/blob/main/content/"
@@ -83,7 +83,7 @@ params:
     profileMode:
         enabled: false
         title: "arrrrrmin.netlify.app" # optional default will be site title
-        imageUrl: "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4"  # optional
+        imageUrl: "https://pbs.twimg.com/profile_images/1545306587836960768/2hbCpjgh_400x400.jpg"  # optional
         imageTitle: "UserImage" # optional
         imageWidth: 150 # custom size
         imageHeight: 150 # custom size
@@ -97,8 +97,9 @@ params:
 
     # home-info mode
     homeInfoParams:
-        Title: "Hi there \U0001F44B "
-        Content: "I'm armin, welcome to my very small thinking, working, developing, region of interest bubble in which I learn and document all kinds of things."
+        Title: "arrrrrmins personal website"
+        Content: ""
+        imageUrl: "https://pbs.twimg.com/profile_images/1545306587836960768/2hbCpjgh_400x400.jpg"  # optional
 
     socialIcons:
         - name: github
