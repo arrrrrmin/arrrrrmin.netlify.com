@@ -85,7 +85,7 @@ params:
     profileMode:
         enabled: false
         title: "arrrrrmin.netlify.app" # optional default will be site title
-        imageUrl: "https://pbs.twimg.com/profile_images/1545306587836960768/2hbCpjgh_400x400.jpg"  # optional
+        imageUrl: "/2hbCpjgh_400x400.jpg"  # optional
         imageTitle: "UserImage" # optional
         imageWidth: 150 # custom size
         imageHeight: 150 # custom size
@@ -101,7 +101,7 @@ params:
     homeInfoParams:
         Title: "arrrrrmins personal website"
         Content: ""
-        imageUrl: "https://pbs.twimg.com/profile_images/1545306587836960768/2hbCpjgh_400x400.jpg"  # optional
+        imageUrl: "/2hbCpjgh_400x400.jpg"  # optional
 
     socialIcons:
         - name: github
