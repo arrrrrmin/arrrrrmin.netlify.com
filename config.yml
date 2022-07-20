@@ -1,5 +1,5 @@
 baseURL: "https://arrrrrmin.netlify.app"
-title: "arrrrrmin.netlify.app - writing about development, data science, aws"
+title: "arrrrrmin - writing about development, data science, aws"
 paginate: 5
 theme: hugo-PaperMod
 
