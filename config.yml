@@ -35,11 +35,13 @@ minify:
 params:
     env: production # to enable opengraph, twitter-cards and schema.
     title: "arrrrrmin.netlify.app"
-    description: "Writing about development, data science, aws"
+    description: "I'm a software developer. 
+      I enjoy building things with Python, TypeScript (or JavaScript), Deep-/Machine Learning, 
+      backend APIs and AWS CDK."
     author: "arrrrrmin"
-
-    images: "https://avatars3.githubusercontent.com/u/43553423?s=460&u=c4705accaaa6caf3ddcc188117a58fc5173a8e6b&v=4"
-
+    images: ["Preview.png"]
+    keywords: [Blog, Portfolio, Python, AWS, CDK, API, Machine Learning]
+    languageAltTitle: "English"
     ShowReadingTime: true
     ShowShareButtons: false
     ShowToc: true
@@ -108,7 +110,3 @@ params:
           url: "https://twitter.com/arrrrrmin"
         - name: linkedin
           url: "https://www.linkedin.com/in/armin-müller-von-fischer-7581a8165/"
-
-    analytics:
-        google:
-            SiteVerificationTag: ""

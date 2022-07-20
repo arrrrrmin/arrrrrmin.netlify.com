@@ -4,6 +4,10 @@ date: 2021-10-08 12:22.214030
 draft: false
 summary: "Mocking aws services and functionality with moto and pytest."
 weight: -3
+tags:
+  - mocking
+  - aws
+  - pytest
 ---
 
 Recently I work with aws infrastructre, so my applications use aws services for infra like

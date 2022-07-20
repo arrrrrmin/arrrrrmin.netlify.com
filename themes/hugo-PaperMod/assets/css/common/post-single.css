@@ -22,6 +22,10 @@
     flex-wrap: wrap;
 }
 
+.post-meta a {
+    font-size: 12px;
+}
+
 .post-meta .i18n_list li {
     display: inline-flex;
     list-style: none;

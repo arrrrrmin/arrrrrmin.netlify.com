@@ -4,6 +4,11 @@ date: 2021-08-21 12:22.214030
 draft: false
 summary: "Some awesome tips and tricks one can do with pydantic. Data validation with pydantic and never load json without pydantic anymore. Example usage with boto3 (aws sdk for python)."
 weight: -2
+tags:
+  - python types
+  - validation
+  - data shapes
+  - pydantic
 ---
 
 This is my personal thought and development bubble, so let's look at

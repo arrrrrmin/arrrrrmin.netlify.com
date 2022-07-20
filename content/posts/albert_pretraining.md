@@ -4,6 +4,12 @@ date: 2021-07-14 12:22.214030
 draft: false
 summary: "A guide to understand how pretraining transformer models work. It's basically the prestage, before usage with Huggingface is possible. See the full guide at https://github.com/arrrrrmin/albert-guide."
 weight: 0
+tags:
+  - Albert
+  - language modelling
+  - nlp
+  - semi supervised learning
+  - pretraining
 ---
 
 # Environments setups and configs

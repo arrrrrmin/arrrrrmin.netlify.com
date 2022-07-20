@@ -2,7 +2,7 @@
 <meta property="og:description" content="{{ with .Description }}{{ . }}{{ else }}{{if .IsPage}}{{ .Summary }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}{{ end }}" />
 <meta property="og:type" content="{{ if .IsPage }}article{{ else }}website{{ end }}" />
 <meta property="og:url" content="{{ .Permalink }}" />
-{{- if .Params.cover.image -}}
+{{- if $.Params.cover.image -}}
 {{- if (ne .Params.cover.relative true) }}
 <meta property="og:image" content="{{ .Params.cover.image | absURL }}" />
 {{- else}}
@@ -19,7 +19,7 @@
 {{- with $featured -}}
 <meta property="og:image" content="{{ $featured.Permalink }}"/>
 {{- else -}}
-{{- with $.Site.Params.images }}<meta property="og:image" content="{{ index . 0 | absURL }}"/>{{ end -}}
+{{- with site.Params.images }}<meta property="og:image" content="{{ index . 0 | absURL }}"/>{{ end -}}
 {{- end -}}
 {{- end -}}
 {{- end }}

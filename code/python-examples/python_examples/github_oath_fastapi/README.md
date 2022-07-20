@@ -4,6 +4,12 @@ date: 2021-07-23 12:22.214030
 draft: false
 summary: "An isolated example to show github authorization-code oauth flow in fastapi for web application flow + simple HttpBearer route dependency. This example can be used for all providers of code-based oauth authorization patterns."
 weight: -1
+tags:
+  - auth flow
+  - code grant
+  - fastapi
+  - jwt
+  - auth pattern
 ---
 
 In a recent project I had to add githubs code-based oauth to an API. To solve this I 

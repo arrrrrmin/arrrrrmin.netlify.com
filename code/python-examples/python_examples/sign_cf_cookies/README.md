@@ -4,6 +4,14 @@ date: 2022-05-24 10:56.214030
 draft: false
 summary: "A short guide on how to secure a cloudfront distribution using signed cookies, based on CF's trusted key groups (including aws-cdk infra)."
 weight: -6
+tags:
+  - cloudfront
+  - cookies
+  - auth flow
+  - jwt
+  - aws-cdk
+cover: 
+  image: "sign_cf_cookies.png"
 ---
 
 This article is a short extension of 

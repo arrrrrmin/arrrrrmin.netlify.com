@@ -4,6 +4,10 @@ date: 2021-10-16 12:22.214030
 draft: false
 summary: "Tooling for a conviniently lightweight python project, using pyproject.toml with some simple tools"
 weight: -4
+tags: 
+  - pyproject.toml
+  - poetry
+  - tooling
 ---
 
 In recent projects I wanted to go a bit deeper into how properly set up a python project.

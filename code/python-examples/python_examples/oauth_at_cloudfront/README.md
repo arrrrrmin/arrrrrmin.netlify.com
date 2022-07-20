@@ -4,6 +4,12 @@ date: 2022-02-08 10:26.214030
 draft: false
 summary: "A simple solution to secure cloudfront distributions via lambda@edge"
 weight: -5
+tags:
+  - lambda at edge
+  - cloudfront
+  - auth flow
+cover: 
+  image: "oauth_at_cloudfront.png"
 ---
 
 During a recent project I came accross a common problem when handling content in a frontend. 
