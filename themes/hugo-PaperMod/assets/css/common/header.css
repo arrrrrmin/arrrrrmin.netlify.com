@@ -1,8 +1,6 @@
 .header {
-    left: 0;
     width: 100%;
     z-index: 999;
-    background-color: var(--code-bg);
 }
 
 .nav {
@@ -22,7 +20,6 @@
     display: block;
     text-decoration: none;
     color: var(--secondary);
-    font-weight: 500;
 }
 
 .logo,
