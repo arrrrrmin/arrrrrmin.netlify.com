@@ -9,6 +9,8 @@ tags:
   - python
   - hooks
   - git
+cover:
+  image: "pre_commit_hooks.png"
 ---
 
 > A framework for managing and maintaining multi-language pre-commit hooks.
@@ -25,6 +27,9 @@ Hooks are small programms that check your committed changes and raise an error (
 your commits do not pass the hooks check. Basically pre-commit holds the foot into the door, 
 if you'r committed changes not following the spec put up by your hooks config. So it prevents you
 from committing code with *low quality*. 
+The diagram below illustrates this behaviour:
+
+![Pre-Commit-Hooks Process](/pre_commit_hooks.png)
 
 ## Get started
 
