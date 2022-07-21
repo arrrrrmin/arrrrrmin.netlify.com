@@ -1,0 +1,26 @@
+@startuml
+!theme plain
+
+[*] -> GitAdd
+GitAdd : Code Changes
+GitAdd -right-> GitCommit
+GitCommit : Staged Changes
+GitCommit -> PreCommitHooks
+
+state PreCommitHooks {
+  [*] -> trailing_whitespace
+  --
+  [*] -> end_of_file_fixer
+  --
+  [*] -> check_yaml
+  --
+  [*] -> check_added_large_files
+}
+
+state passed <<choice>>
+state end <<end>>
+
+PreCommitHooks -down-> passed : Checks passed?
+passed -> GitAdd : No
+passed -> end : Yes
+@enduml
