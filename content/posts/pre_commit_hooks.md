@@ -101,3 +101,69 @@ develop your own hook [`pre-commit try-repo`](https://pre-commit.com/#pre-commit
 a hooks behaviour. For your own custom hook development have a look at: 
 * [creating new hooks](https://pre-commit.com/#creating-new-hooks)
 * [pre-commit-hooks](https://github.com/pre-commit/pre-commit-hooks)
+
+## Develop your own hook
+
+In order to learn how pre-commit hooks are build, I've developed a hook that checks if the current `requirements.txt` file of a
+python project is in sync with `pyproject.toml` and the currently used poetry environment (`poetry run which python`).
+
+This hook is called [poetry-requirements](https://github.com/arrrrrmin/poetry-requirements) and is helpful if your repository 
+needs a `requirements.txt` for things like heroku deployment or building a docker container in a github action 
+(you don't have to install poetry in the action to do that). Basically if you need a requirements.txt and you want to work with 
+poetry for things like environment and dependency management, this hook can do the trick. 
+
+Basically it's a python cli wrapper for `poetry export`. An `ArgumentParser` takes care of the arguments and the main.py runs a
+diff between `requirements.txt` and the output of `poetry export`.
+
+Here's a small guiding list to build your own hook:
+* Define the arguments you need on cli
+* Build the CLI tool
+* Define defaults for your tool in `.pre-commit-hooks.yaml`
+* Create a sample `.pre-commit-config.yaml` for others to use your tool.
+
+To test your repo you either test it in the repo of your hook or setup a test repo. In any case you can execute the following
+command in your testing repo:
+
+```terminal
+pre-commit try-repo <path/repo/to/repo> <hook-id>
+```
+In order to get started see [poetry_requirements/main.py](https://github.com/arrrrrmin/poetry-requirements/blob/main/poetry_requirements/main.py).
+But beaware that [main.py#L72](https://github.com/arrrrrmin/poetry-requirements/blob/dcbd5092b293c7f4c3754f46445b97ac832a416e/poetry_requirements/main.py#L72) is a commented, which you likly need if you'r hook runs on a set of files.
+
+The best examples are coming from [pre-commit/pre-commit-hooks](https://github.com/pre-commit/pre-commit-hooks).
+
+## An opinionated list of awesome hooks
+
+This is my go to default pre-commit hooks
+
+```yaml
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.3.0
+    hooks:
+    -   id: trailing-whitespace
+    -   id: end-of-file-fixer
+    -   id: check-yaml
+    -   id: check-added-large-files
+    -   id: debug-statements
+    -   id: detect-private-key
+    -   id: pretty-format-json
+    -   id: check-added-large-files
+-   repo: https://github.com/pre-commit/pygrep-hooks
+    rev: v1.9.0
+    hooks:
+    -   id: python-use-type-annotations
+-   repo: https://github.com/asottile/reorder_python_imports
+    rev: v3.8.2
+    hooks:
+    -   id: reorder-python-imports
+        args: ['--application-directories=.:environment_sound_classification', --py37-plus]
+-   repo: https://github.com/psf/black
+    rev: 22.6.0
+    hooks:
+    -   id: black
+-   repo: https://github.com/pycqa/flake8
+    rev: 5.0.4
+    hooks:
+    -   id: flake8
+```
