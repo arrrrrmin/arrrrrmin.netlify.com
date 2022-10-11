@@ -11,6 +11,7 @@ post_dirs: typing.List[str] = [
     "moto_mocks",
     "oauth_at_cloudfront",
     "sign_cf_cookies",
+    "end_to_end_sound_classification",
 ]
 
 
