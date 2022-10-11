@@ -78,9 +78,13 @@ ul {
 }
 
 a {
-    color: var(--secondary);
+    color: var(--content);
+    border-radius: 2px;
 }
 
+a:hover {
+    color: var(--secondary);
+}
 
 body,
 figure,

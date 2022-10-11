@@ -95,6 +95,11 @@
     bottom: 0;
 }
 
+.entry-link:hover {
+    background-color: unset;
+    border-color: var(--primary);
+}
+
 .entry-cover,
 .entry-isdraft {
     font-size: 14px;
