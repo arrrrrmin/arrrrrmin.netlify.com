@@ -11,7 +11,7 @@ tags:
   - sound classification
   - environmental sounds 
 cover: 
-  image: "feature_convolution_10fps.gif"
+  image: "end_to_end_sound_classification.png"
 ---
 
 Recently I dug a bit into sound classification and during some research I wanted to 
