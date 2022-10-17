@@ -16,6 +16,8 @@ fastapi = "^0.78.0"
 fastapi-cloudauth = "^0.4.3"
 torchaudio = "^0.12.1"
 numpy = "^1.23.3"
+torchlibrosa = "^0.0.9"
+matplotlib = "^3.6.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
