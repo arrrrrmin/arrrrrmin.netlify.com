@@ -28,7 +28,8 @@
     --hljs-bg: #2e2e33;
     --code-bg: #414245;
     --border: #333;
-    --marker: #1452B5;
+    /* --marker: #1452B5; */
+    --marker: #ffe432;
 }
 
 .list {

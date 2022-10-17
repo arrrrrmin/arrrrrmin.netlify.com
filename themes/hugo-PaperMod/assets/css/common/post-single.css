@@ -248,7 +248,7 @@
     text-align: center;
 }
 
-.post-content figure {
+.post-content figure.quarter-sized  {
     width: 80%;
     margin: auto;
 }
