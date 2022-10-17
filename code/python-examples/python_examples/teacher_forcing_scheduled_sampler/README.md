@@ -170,5 +170,5 @@ drop drastically in frequency until `p_min` is hit. Like this scheduled sampling
 guiding effect to the rnns training, without overfitting instantly.
 
 > PS: If you want to replicate the experiment: All sources are available at
-> [github.com/arrrrrmin/arrrrrmin.netlify.com](https://github.com/arrrrrmin/arrrrrmin.netlify.com/code/python-examples/python_examples/teacher_forcing_scheduled_sampler)
+> [github.com/arrrrrmin/arrrrrmin.netlify.com](https://github.com/arrrrrmin/arrrrrmin.netlify.com/tree/main/code/python-examples/python_examples/teacher_forcing_scheduled_sampler)
 > Enjoy 🎉
