@@ -360,7 +360,7 @@ Here is a simulation with
 * batch_size 16
 * each sample with 107 time steps
 
-{{< figure src="/scheduled_sampling.gif" caption="The above schedule with `gamma=0.08` (bottom), together with the forced samples per batch and timestamp on the bottom. Blue tiles are teacher forced `targets` and replaced in the batch and timestamp for the RNNs prediction in `t+1`. White tiles are rnn predictions." >}}
+{{< figure src="/scheduled_sampling.gif" caption="The above schedule with `gamma=0.08` (bottom), together with the forced samples per batch and timestamp (top). Blue tiles are teacher forced `targets` and replaced in the batch and timestamp for the RNNs prediction in `t+1`. White tiles are rnn predictions." >}}
 
 In the beginning there is clear a lot of blue tiles (true `targets`) are passed to the rnn
 inputs, meaning the rnns original prediction is replaced with true `targets` in these
