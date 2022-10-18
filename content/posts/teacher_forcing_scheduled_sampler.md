@@ -176,8 +176,7 @@ the RNN. The process looks like this:
         B, _, T, M = features.size()
         C = self.num_classes
 
-        features = features.transpose(2, 3)
-        features = self.convolutions(features).permute(0, 2, 1, 3).contiguous()
+        features = self.convolutions(features).permute(0, 2, 1, 3)
         features = features.squeeze(-1)
 
         teacher_force = torch.zeros(B, C)
@@ -186,9 +185,9 @@ the RNN. The process looks like this:
         outputs = torch.zeros(B, T, self.num_classes)
 
         for t in range(T):
-            features = torch.cat([features[:, t, :], teacher_force], dim=-1)
+            rnn_features = torch.cat([features[:, t, :], teacher_force], dim=-1)
 
-            h = self.rnn(features[:, t, :], h)
+            h = self.rnn(rnn_features, h)
             out = self.fnn(h)
             rnn_inputs = out.sigmoid().gt(.5).float()
 
@@ -198,17 +197,20 @@ the RNN. The process looks like this:
                     targets[batch_idx, t, :] if force else rnn_inputs[batch_idx, :]
                 )
             outputs[:, t, :] = out
+        return outputs
+
 ````
 
 The important in the above `forward`-step is the decision wether or not to use the correct
 `targets`, which is performed at every timestep `t`:
 
 ````Python
-            rnn_inputs = out.sigmoid().gt(.5).float()
 
             force_targets = self.get_forced_targets(B, (targets is None))
             for batch_idx, force in enumerate(force_targets):
                 teacher_force[batch_idx, :] = (
+                    targets[batch_idx, t, :] if force else rnn_inputs[batch_idx, :]
+                )
 ````
 
 Not that we keep all the original `out` variables in `outputs`, so the loss is later
