@@ -92,8 +92,7 @@ class CRNN(Module):
         B, _, T, M = features.size()
         C = self.num_classes
 
-        features = features.transpose(2, 3)
-        features = self.convolutions(features).permute(0, 2, 1, 3).contiguous()
+        features = self.convolutions(features).permute(0, 2, 1, 3)
         features = features.squeeze(-1)
 
         teacher_force = torch.zeros(B, C)
@@ -102,9 +101,9 @@ class CRNN(Module):
         outputs = torch.zeros(B, T, self.num_classes)
 
         for t in range(T):
-            features = torch.cat([features[:, t, :], teacher_force], dim=-1)
+            rnn_features = torch.cat([features[:, t, :], teacher_force], dim=-1)
 
-            h = self.rnn(features[:, t, :], h)
+            h = self.rnn(rnn_features, h)
             out = self.fnn(h)
             rnn_inputs = out.sigmoid().gt(.5).float()
 

@@ -72,14 +72,14 @@ of `t`-th timestep they select the output of the former classification step as i
 the RNN. The process looks like this:
 
 ````Python
-{! ./python_examples/teacher_forcing_scheduled_sampler/example_002.py [ln:81-116] !}
+{! ./python_examples/teacher_forcing_scheduled_sampler/example_002.py [ln:81-117] !}
 ````
 
 The important in the above `forward`-step is the decision wether or not to use the correct
 `targets`, which is performed at every timestep `t`:
 
 ````Python
-{! ./python_examples/teacher_forcing_scheduled_sampler/example_002.py [ln:109-113] !}
+{! ./python_examples/teacher_forcing_scheduled_sampler/example_002.py [ln:109-114] !}
 ````
 
 Not that we keep all the original `out` variables in `outputs`, so the loss is later
