@@ -91,7 +91,7 @@ class CRNN(Module):
             out = self.fnn(h)
             rnn_inputs = out.sigmoid().gt(0.5).float()
 
-            # We call a new probability each time step (N * T) times
+            # We call a new probability each time step (T)
             force_targets, prob = self.get_forced_targets(B, (targets is None))
             sampled_probs.append(prob)
             targets_forced.append(force_targets)
