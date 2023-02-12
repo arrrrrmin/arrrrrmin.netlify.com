@@ -13,8 +13,8 @@ menu:
         - name: posts
           url: posts/
           weight: 5
-        - name: portfolio
-          url: portfolio
+        - name: about
+          url: about
           weight: 10
         - name: search
           url: search
@@ -85,15 +85,15 @@ params:
     profileMode:
         enabled: false
         title: "arrrrrmin.netlify.app" # optional default will be site title
-        imageUrl: "/2hbCpjgh_400x400.jpg"  # optional
+        imageUrl: "/MOSHED-2023.jpg"  # optional
         imageTitle: "UserImage" # optional
         imageWidth: 150 # custom size
         imageHeight: 150 # custom size
         buttons:
         - name: posts
           url: "/posts/"
-        - name: portfolio
-          url: "/portfolio"
+        - name: about
+          url: "/about"
         - name: search
           url: "/search"
 
@@ -101,12 +101,12 @@ params:
     homeInfoParams:
         Title: "arrrrrmins personal website"
         Content: ""
-        imageUrl: "/2hbCpjgh_400x400.jpg"  # optional
+        imageUrl: "/MOSHED-2023.jpg"  # optional
 
     socialIcons:
         - name: github
           url: "https://github.com/arrrrrmin"
-        - name: twitter
-          url: "https://twitter.com/arrrrrmin"
+        - name: mastodon
+          url: "https://chaos.social/@arrrrrmin"
         - name: linkedin
           url: "https://www.linkedin.com/in/armin-müller-von-fischer-7581a8165/"
